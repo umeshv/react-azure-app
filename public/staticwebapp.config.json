@@ -2,8 +2,14 @@
   "routes": [
     {
       "route": "/api/*",
-      "allowedRoles": ["anonymous"],
-      "rewrite": "https://reqres.in/api/{*}"
+      "methods": [
+        "get",
+        "post"
+      ],
+      "rewrite": "https://reqres.in/api/{*}",
+      "allowedRoles": [
+        "anonymous"
+      ]
     }
   ],
   "navigationFallback": {
