@@ -1,10 +1,24 @@
 {
-    "routes": [
-      {
-        "route": "/api/*",
-        "allowedRoles": ["anonymous"],
-        "backendUri": "https://reqres.in/api"
-      }
-    ]
+  "routes": [
+    {
+      "route": "/api/*",
+      "allowedRoles": ["anonymous"],
+      "rewrite": "https://reqres.in/api/{*}"
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html",
+      "statusCode": 200
+    }
+  },
+  "mimeTypes": {
+    ".json": "text/json"
+  },
+  "globalHeaders": {
+    "Cache-Control": "no-cache"
   }
-  
+}
