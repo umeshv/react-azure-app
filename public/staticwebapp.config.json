@@ -2,25 +2,12 @@
   "routes": [
     {
       "route": "/api/*",
-      "methods": [
-        "get",
-        "post"
-      ],
       "rewrite": "https://reqres.in/api/{*}",
-      "statusCode": 200,
-      "allowedRoles": [
-        "anonymous"
-      ]
+      "allowedRoles": ["anonymous"]
     }
   ],
   "navigationFallback": {
     "rewrite": "/index.html"
-  },
-  "responseOverrides": {
-    "404": {
-      "rewrite": "/index.html",
-      "statusCode": 200
-    }
   },
   "mimeTypes": {
     ".json": "text/json"
