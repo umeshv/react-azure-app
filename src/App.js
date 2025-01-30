@@ -8,7 +8,7 @@ const App = () => {
   useEffect(() => {
     // Call the API via reverse proxy
     axios
-      .get("/api/users?page=1")
+      .get("/api/users?page=2")
       .then((response) => {
         setUsers(response.data.data); // Set users from API response
       })
