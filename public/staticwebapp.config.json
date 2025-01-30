@@ -7,6 +7,7 @@
         "post"
       ],
       "rewrite": "https://reqres.in/api/{*}",
+      "statusCode": 200,
       "allowedRoles": [
         "anonymous"
       ]
